@@ -1,0 +1,12 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<h1>Create a New Project</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <label for="name">Project Name:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+    <input type="submit" value="Create Project">
+</form>
+{% endblock %}

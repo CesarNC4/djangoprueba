@@ -1,8 +1,11 @@
 {% extends 'layouts/base.html' %}
 
+{% load static %}
+
 {% block content %}
 
 <h1>Welcome to the Index Page</h1>
+<img src="{% static 'img.png' %}" alt="My Image" width="200" height="200">
 <p>This is the main page of our Django application.</p>
 <p><strong>{{ title }}</strong></p>
 

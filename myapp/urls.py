@@ -5,10 +5,11 @@ from myapp.views import hello, about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
-    path('about/', views.about),
-    path('hello/<str:name>/', views.hello),
-    path('project/<int:project_id>/', views.project),
-    path('task/<int:task_id>/', views.task),
+    path('', views.index, name='index'),
+    path('about/', views.about, name='about'),
+    path('hello/<str:name>/', views.hello, name='hello'),
+    path('project/', views.project, name='project'),
+    path('task/', views.task, name='tasks'),
     path('create_task/', views.create_task, name='create_task'),
+    path('create_projects/', views.create_projects, name='create_projects'),
 ]
